@@ -6,4 +6,4 @@ openssl x509 -in certificate.crt -pubkey -noout -outform pem | sha256sum
 ./keytool -import -trustcacerts -alias AnyName -file SSL_file_locaiton -keystore  /opt/jdk1.8.0_72/jre/lib/security/cacerts(cacerts file path)
 
 Verify certifcate import
-./keytool -list -v -keystore /opt/jdk1.8.0_72/jre/lib/security/cacerts | grep -i onlineSBI
+./keytool -list -v -keystore /opt/jdk1.8.0_72/jre/lib/security/cacerts | grep -i AliasName 
