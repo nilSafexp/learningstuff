@@ -5,5 +5,10 @@ openssl x509 -in certificate.crt -pubkey -noout -outform pem | sha256sum
 #Importing(adding) SSl certificate to JDK cacerts file
 ./keytool -import -trustcacerts -alias AnyName -file SSL_file_locaiton -keystore  /opt/jdk1.8.0_72/jre/lib/security/cacerts(cacerts file path)
 
-Verify certifcate import
+#Verify certifcate import
 ./keytool -list -v -keystore /opt/jdk1.8.0_72/jre/lib/security/cacerts | grep -i AliasName 
+
+#Verifying bit length of certificate
+openssl x509 -in certificate.crt -text -noout | grep "Public-Key"
+openssl rsa -in walletweb.pem -text -noout | grep "Private-Key"
+
