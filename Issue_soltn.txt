@@ -1,0 +1,124 @@
+1)Unable to start httpd 
+
+#ERROR
+(98)Address already in use: AH00072: make_sock: could not bind to address [::]:443
+
+#SOLUN
+Delete multiple files using port 443
+Delete virtualhost entry *:443
+
+
+2)Direct IP prohibited(Vulnerablity)
+
+Working solun
+
+#SOLUN
+<VirtualHost 114.143.100.102>
+
+    RedirectPermanent / https://test.avantgardepayments.com/
+
+</VirtualHost>
+
+<VirtualHost 114.143.100.102>
+
+    DocumentRoot "/var/www/html"
+    ServerName test.avantgardepayments.com/
+
+</VirtualHost>
+#
+
+3)Vulnerablity header disable
+
+Solutn: https://blogs.oracle.com/oswald/hide-x-powered-by:-php
+
+4) tomcat webpage disable
+
+https://www.thegeekstuff.com/2013/08/hide-tomcat-version-number/
+Tomcat page with error https://www-01.ibm.com/support/docview.wss?uid=swg21649489
+
+5)Bash script command exited but with not show output
+https://stackoverflow.com/questions/12137431/test-if-a-command-outputs-an-empty-string
+
+6) Updateing clamav with yum & broken package
+https://bugzilla.redhat.com/show_bug.cgi?id=1364253
+https://www.centos.org/forums/viewtopic.php?t=58763
+https://shebangme.blogspot.com/2010/04/how-to-upgrade-clam-anti-virusclamav-on.html _NA
+
+7) Not getting https in wallet api 
+Need to import certificate in truststore
+
+8)High CPU utilization
+https://linoxide.com/monitoring-2/10-tools-monitor-cpu-performance-usage-linux-command-line/
+http://cpulimit.sourceforge.net/
+
+GUI linux ==>https://itstillworks.com/make-your-windows-pc-boot-faster-by-getting-rid-of-useless-startup-apps-13558581.html
+
+9) Unable to get SSH connection on AMazon linux 
+
+10) $'\r': command not found
+while tranfering windows edited file to linux
+fix:  sed -i -e 's/\r$//' Linux_system_hardening_script.txt
+
+
+11) Login script for non-root user with privilege
+su -c "/home/paygateadmin/apache-activemq-5.13.4/bin/activemq start" -s /bin/bash paygateadmin
+
+12) Master user does not have super privilege
+https://www.5balloons.info/fix-you-do-not-have-the-super-privilege-amazon-rds/
+https://inno-solutions.ro/2011/06/amazon-rds-super-privileges/?lang=en
+
+
+13) sync files between 2 servers
+rsync -avz -e "ssh -i /root/mykey.pem" testfile.tar ec2-user@ec2-13-126-114-120.ap-south-1.compute.amazonaws.com:/tmp/
+
+14) AWS deployment AUTOMATION
+https://www.softwaretestinghelp.com/aws-codedeploy-devops-tutorial/
+
+15) Read csv file in Linux
+column -s, -t < somefile.csv | less -#2 -N -S
+
+16)warning: setlocale: LC_CTYPE: cannot change locale (en_US.UTF-8): No such file or directory
+ localedef -i en_US -f UTF-8 en_US.UTF-8
+ 
+17)Clamav Update failed. Your network may be down or none of the mirrors listed in /etc/freshclam.conf is working. Check
+Can't download main.cvd from database.clamav.net
+---> clear mirrors.dat, delete main.cvd
+
+18) Domain e-mail spoofing
+Use DMARC record
+
+19)Block Cross origin Resource sharing 
+https://www.wikitechy.com/tutorials/apache/enable-cors-in-apache
+
+20)Cacheable HTTP Response Vulnerablity
+https://stackoverflow.com/questions/4480304/how-to-set-http-headers-for-cache-control
+
+content security 
+https://rmohan.com/?p=7702
+
+
+21) Apache web server increase connection size
+https://www.looklinux.com/how-to-enable-worker-mpm-in-apache-2-4/
+https://stackoverflow.com/questions/3389496/how-do-you-increase-the-max-number-of-concurrent-connections-in-apache
+
+22) Restict access to txt files in web apache server
+https://serverfault.com/questions/22577/how-to-deny-the-web-access-to-some-files
+
+23)
+https://dev.to/ayekpleclemence/could-not-reliably-determine-the-server-s-fully-qualified-domain-name-using-127-0-1-1-for-servername-error-on-ubuntu-4gc9
+
+24) RabbitMQ installation troubleshooting
+https://stackoverflow.com/questions/50156248/installing-up-to-date-version-of-erlang-on-rhel7
+https://success.outsystems.com/Support/Enterprise_Customers/Maintenance_and_Operations/Cache_Invalidation_in_OutSystems_11/RabbitMQ_management_and_troubleshooting
+https://computingforgeeks.com/installing-rabbitmq-on-centos-fedora/
+https://groups.google.com/g/rabbitmq-users/c/w0aJNmfz1N8
+https://help.onapp.com/hc/en-us/articles/115001368587-RabbitMQ-can-t-be-started-after-being-stopped-incorrectly
+
+25) After login to the Application --code goes to check for refereeal header to apche server.
+Use necessary header with standard HTTP file( safexpay Web)
+
+26) Fab Proxy
+
+
+27)AWS trigger not working
+https://aws.amazon.com/premiumsupport/knowledge-center/rds-mysql-functions/
