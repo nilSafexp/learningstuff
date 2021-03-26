@@ -1,0 +1,16 @@
+--- #Handler for updating password script
+- hosts: demo[0]
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+          -
+            name: Testing user module
+            command: 'openssl rand -base64 14'
+            register: output
+          -   ansible.builtin.user:
+                  name: npmte
+                  state: present
+                  update_password: always
+                  password: output
+          - debug: var=output.stdout_lines
