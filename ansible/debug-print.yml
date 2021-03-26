@@ -1,0 +1,9 @@
+---
+- hosts: demo[0]
+  user: ansible
+  tasks:
+    - name: uptime
+      command: 'openssl rand -base64 14'
+      register: output
+
+    - debug: var=output.stdout_lines
