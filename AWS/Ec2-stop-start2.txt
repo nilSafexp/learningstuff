@@ -1,5 +1,6 @@
 #Use Node.js 8.10
-#How it works--> Create IAM role for lambda, refer IAM policy (LmbdaIAM.txt)
+#How it works--> Create IAM role for lambda, refer IAM policy (LmbdaIAM.txt), whille setup  cloudwatch Event Configure input>Constant (JSON text): {“action”: “start”}
+# Then stop {“action”: “stop”} JSON text
 
 /**
  * 
