@@ -1,0 +1,14 @@
+---
+-
+  hosts: demo[0]
+  user: ansible
+  become: yes
+  gather_facts: no
+  tasks:
+          -
+            shell: ls
+            register: new
+          -
+            debug:
+                   #msg: "list of the cureent directory ---> new"
+                   msg: "output of command is  {{new}}"
