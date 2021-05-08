@@ -1,0 +1,10 @@
+---
+-
+  hosts: demo[0]
+  become: yes
+  user: ansible
+  tasks:
+          -
+            service:
+                    name: httpd
+                    state: started
