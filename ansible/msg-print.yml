@@ -1,0 +1,10 @@
+---
+-
+ hosts: demo[0]
+ user: ansible
+ become: yes
+ tasks:
+         -
+           yum:
+             pkg: httpd
+             state: absent
