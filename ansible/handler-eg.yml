@@ -1,0 +1,15 @@
+--- #Handler test script
+-
+  hosts: demo[0]
+  user: ansible
+  become: yes
+  connection: ssh
+  tasks:
+          -
+            name: Testing httpd isntalltion
+            action: yum name=httpd state=absent
+            notify: restart httpd
+  handlers:
+          -
+            name: restart httpd
+            action: service name=httpd state=stopped
