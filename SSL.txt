@@ -12,3 +12,10 @@ openssl x509 -in certificate.crt -pubkey -noout -outform pem | sha256sum
 openssl x509 -in certificate.crt -text -noout | grep "Public-Key"
 openssl rsa -in walletweb.pem -text -noout | grep "Private-Key"
 
+
+#Creating SSL certificate
+1) create private key fill(web server store)
+openssl genrsa -out <yourcertname>.key 4096
+
+2)CSR create
+openssl req -new -sha256 -key <yourcertname>.key -out AnyName.csr
