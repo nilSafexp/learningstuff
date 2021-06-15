@@ -99,10 +99,9 @@ kubectl get pods --all-namespaces
 
 kubeadm token create --print-join-command
 
-kubeadm join 172.31.15.139:6443 --token y2hv2d.we8fqs9pwm1copak --discovery-token-ca-cert-hash sha256:f1b9f7adb0928479ed553b659f8905820a1fb60d9e70a17b3ffcf7c082e85423
-
 =========In Master Node End====================
 
+Run output of above command to the worker node
 
 Add Worker Machines to Kubernates Master
 =========================================
