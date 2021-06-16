@@ -1,0 +1,11 @@
+1) Running pod through command line
+kubectl run apachetest --image=tomcat
+
+2) Running serice through command line
+kubectl expose pod apachetestyml  --type=NodePort --port=8080 --target-port=8080 -n demotest
+
+3) Redirectiong command output to yaml file(service Only)
+kubectl run apachetest --dry-run --image=tomcat -o yaml > tomcatpod.yml
+
+4) Redirectiong command output to yaml file(service Only)
+ kubectl expose pod apachetestyml --dry-run --type=NodePort --port=8080 --target-port=8080 -n demotest -o yaml
