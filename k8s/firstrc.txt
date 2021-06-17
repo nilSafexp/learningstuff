@@ -15,3 +15,11 @@ spec:
       containers:
       - image: tomcat
         name: tomcat1
+
+
+================================================
+Notes:
+1. To troubleshoot pod issue we will change the POD label Then troubleshoot.
+2. selector= pod lables
+3. If I want to keep 1 pod must be running in any situation which method I will use(Using pod YAML or RC yaml)? 
+--> Use RC, If pod get deleted then it always make new
