@@ -3,7 +3,7 @@ kind: ReplicationController
 metadata:
   name: tomcat1
 spec:
-  replicas: 4
+  replicas: 5
   selector:
     app: tomcat1
   template:
