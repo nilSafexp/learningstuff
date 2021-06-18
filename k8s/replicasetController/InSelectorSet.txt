@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: apachetestyml
+  #  labels:
+  #  app: rctesting
+  # namespace: demotest
+spec:
+  replicas: 4
+  selector:
+    matchExpressions:
+      - key: app
+        operator: In
+        values:
+          - myapp2
+  template:
+    metadata:
+      labels:
+        name: apachetestyml
+    spec:
+      containers:
+      - image: tomcat
+        name: tomcat1
