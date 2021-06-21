@@ -1,1 +1,2 @@
-1
+Creating service for the deployment object
+kubectl expose deployment dtestdeploy --dry-run=client --type=NodePort --port=8080 --target-port=8080
