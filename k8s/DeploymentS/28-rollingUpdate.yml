@@ -20,6 +20,5 @@ spec:
         app: myapp
     spec:
       containers:
-      - image: tomcat
-        # image: coolgourav147/nginx-custom
+      - image: nilk8ops/test:latest
         name: dtestdeploy
