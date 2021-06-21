@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dtestdeploy
+  labels:
+    name: dtestdeploy
+spec:
+  replicas: 3
+  strategy:
+    rollingUpdate:
+      maxSurge: 0
+      maxUnavailable: 1
+    type: RollingUpdate
+  selector:
+    matchLabels:
+         app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - image: tomcat
+        # image: coolgourav147/nginx-custom
+        name: dtestdeploy
