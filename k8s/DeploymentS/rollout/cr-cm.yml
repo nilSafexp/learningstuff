@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dtestdeploy
+  labels:
+    name: dtestdeploy
+  annotations:
+    kubernetes.io/change-cause: "default tomcat hub"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+         app: myapp
+  template:
+    metadata:
+      labels:
+        app: myapp
+    spec:
+      containers:
+      - image: tomcat
+        # image: coolgourav147/nginx-custom
+        name: dtestdeploy
