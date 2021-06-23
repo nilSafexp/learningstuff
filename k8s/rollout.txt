@@ -1,0 +1,8 @@
+1) Rollback to previos version
+kubectl rollout undo --to-revision=1 deployment dtestdeploy
+
+2) Pause deployment
+kubectl rollout pause deployment dtestdeploy
+
+3) Resume pause deployment
+kubectl rollout resume deployment dtestdeploy
