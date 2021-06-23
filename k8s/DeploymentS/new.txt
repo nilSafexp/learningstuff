@@ -1,2 +1,12 @@
 Creating service for the deployment object
 kubectl expose deployment dtestdeploy --dry-run=client --type=NodePort --port=8080 --target-port=8080
+
+Rollout
+1) Rollback to previos version
+kubectl rollout undo --to-revision=1 deployment dtestdeploy
+
+2) Pause deployment
+kubectl rollout pause deployment dtestdeploy
+
+3) Resume pause deployment
+kubectl rollout resume deployment dtestdeploy
