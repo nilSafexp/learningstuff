@@ -1,0 +1,31 @@
+apiVersion: v1
+data:
+  application.properties: |
+    database_uname=123
+    database_passwd=456
+  cmap.yml: |
+    apiVersion: v1
+    data:
+      database_ip: 192.168.1.234
+      key1: 1
+      key2: 3
+    kind: ConfigMap
+    metadata:
+      name: cm6
+  cmapFile.yml: ""
+  env.sh: |
+    #this is temp env file
+
+    database_uname=123
+    database_passwd=456
+  simple.properties: |
+    new_admin=hachtoAdmin
+    new_pasword=v!srloPwd
+  test1.properties: |
+    new1=new3
+  test2.properties: |
+    new4=new5
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: cm4
