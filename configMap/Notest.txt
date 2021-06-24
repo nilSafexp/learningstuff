@@ -1,0 +1,14 @@
+Command to create the cm from command line
+kubectl create cm cm1 --from-literal='database_ip=192.168.1.234'
+
+Use file to provide configMap
+kubectl create cm cm2 --from-file=application.properties
+
+Use folder to provide configMap
+kubectl create cm cm4 --from-file=../configMap/
+
+difference between env & configMap file
+i)Value mapping & space is ignore
+ii) Take fileName as value
+
+
