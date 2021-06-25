@@ -1,0 +1,16 @@
+3-->
+NoSchedule
+PreferNoSchedule 
+NoExecute -- delete existing worker pod
+
+
+By-default operator
+Equal value
+
+toleration values have the obligation to the pod creation
+
+taint not having obligation they have to obey
+
+If value of toleration is not satisfy pod can be creating
+
+IF values are empty, it has the permission to create anywhere
