@@ -14,3 +14,7 @@ fi
 ===
 Calculation in bash
 echo $[$X + $Y] | bc
+
+==
+Comparison against variable
+if [[ $VAR -gt 10 ]]
