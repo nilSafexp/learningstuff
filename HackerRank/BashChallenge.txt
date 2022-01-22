@@ -10,3 +10,7 @@ echo  "X is greater than Y"
 else
 echo "X is equal to Y"
 fi
+
+===
+Calculation in bash
+echo $[$X + $Y] | bc
