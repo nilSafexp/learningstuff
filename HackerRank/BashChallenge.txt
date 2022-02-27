@@ -1,0 +1,30 @@
+#!/bin/bash
+read X
+read Y
+if [ $X -lt $Y ]
+then
+echo "X is less than Y"
+elif [ $X -gt $Y ]
+then
+echo  "X is greater than Y"
+else
+echo "X is equal to Y"
+fi
+
+===
+Calculation in bash
+echo $[$X + $Y] | bc
+
+==
+Comparison integer against variable
+if [[ $VAR -gt 10 ]]
+
+==
+Comapring string against variable
+read name
+if [ $name == Y ] || [ $name == y]
+then 
+echo "YES"
+else [ $name == n ] || [ $name == N]
+echo "NO"
+fi
